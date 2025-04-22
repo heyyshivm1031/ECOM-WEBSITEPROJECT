@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - ShopSphere</title>
+    <link rel="icon" type="image" href="logo.png.webp">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-logo" href="index.html">ShopSphere</a>
+            <div class="navbar-links">
+                <a href="index.html"><i class="fas fa-home"></i>Home</a>
+                <a href="aboutus.html"><i class="fas fa-info-circle"></i>About Us</a>
+                <a href="contactus.html"><i class="fas fa-envelope"></i>Contact Us</a>
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i> Cart
+                </a>
+                <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="profile.html">
+                    <span class="profile-icon">
+                        <i class="fas fa-user"></i>
+                    </span>
+                    Profile
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="product-detail-container">
+            <div class="product-image-container">
+                <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/5695cacd-1a72-4c38-9b8d-5706254672fc/NIKE+DUNK+HI+RETRO+SE.png" alt="Main Product Image" class="product-image" id="mainImage" onclick="showLightbox(this.src)">
+                <button class="image-nav" id="prevImage" onclick="changeImage(-1)">&#10094;</button>
+                <button class="image-nav" id="nextImage" onclick="changeImage(1)">&#10095;</button>
+                <div class="additional-images">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/5695cacd-1a72-4c38-9b8d-5706254672fc/NIKE+DUNK+HI+RETRO+SE.png" alt="Additional Image 1" class="additional-image" onclick="updateMainImage(this.src)">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/51fb1317-2e47-4125-ab2f-b0a28ac28823/NIKE+DUNK+HI+RETRO+SE.png" alt="Additional Image 2" class="additional-image" onclick="updateMainImage(this.src)">
+                    <img src="nikeshoes2.jpg" alt="Additional Image 3" class="additional-image" onclick="updateMainImage(this.src)">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b21e1cf3-638f-4fe9-a75d-0e60b12edae6/NIKE+DUNK+HI+RETRO+SE.png" alt="Additional Image 4" class="additional-image" onclick="updateMainImage(this.src)">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3437db88-3141-433d-ab2d-b5b92744e751/NIKE+DUNK+HI+RETRO+SE.png" alt="Additional Image 5" class="additional-image" onclick="updateMainImage(this.src)">
+                </div>
+            </div>
+
+            <div class="product-info">
+                <h2 class="product-title">Nike Dunk High</h2>
+                <div class="product-meta">
+                    <p class="product-price">₹24,999.99</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>                       
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-value">4.5</span>
+                        <span class="rating-count">(1,234 ratings)</span>
+                    </div>
+                </div>
+
+                <div class="product-description">
+                    <h3>Product Details</h3>
+                    <ul>
+                        <li>Premium leather upper construction</li>
+                        <li>Padded collar for enhanced comfort</li>
+                        <li>Classic Nike Dunk design</li>
+                        <li>Durable rubber outsole</li>
+                        <li>Available in multiple sizes</li>
+                    </ul>
+                </div>
+
+                <div class="size-selector">
+                    <h3>Select Size</h3>
+                    <div class="size-options">
+                        <button class="size-btn">UK 6</button>
+                        <button class="size-btn">UK 7</button>
+                        <button class="size-btn">UK 8</button>
+                        <button class="size-btn">UK 9</button>
+                        <button class="size-btn">UK 10</button>
+                    </div>
+                </div>
+
+                <div class="delivery-info">
+                    <h3><i class="fas fa-truck"></i> Delivery Information</h3>
+                    <p><i class="fas fa-clock"></i> Estimated delivery: 3-5 business days</p>
+                    <p><i class="fas fa-box"></i> Free shipping on orders above ₹2,000</p>
+                    <p><i class="fas fa-undo"></i> Easy 30-day returns</p>
+                </div>
+
+                <div class="button-container">
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                    <button class="buy-now">
+                        <i class="fas fa-bolt"></i> Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="lightbox" id="lightbox" style="display: none;" onclick="closeLightbox()">
+            <button class="lightbox-close" onclick="closeLightbox(event)">&#10006;</button>
+            <img src="" alt="Lightbox Image" class="lightbox-image" id="lightboxImage">
+        </div>
+        
+
+        <div class="additional-info">
+            <h2>Customer Reviews</h2>
+            <div class="review-summary">
+                <h3>Overall Rating</h3>
+                <div class="average-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="rating-value">4.5</span> (1234 reviews)
+                </div>
+                <div class="rating-bar">
+                    <div class="rating-fill" style="width: 90%;"></div> 
+                </div>
+                <p class="summary-text">Based on customer feedback, this product is highly recommended for its quality and comfort.</p>
+            </div>
+        
+            <div class="reviews-container">
+                <div class="review">
+                    <div class="review-header">
+                        <img src="avatar.jpg" alt="Reviewer Avatar" class="reviewer-avatar">
+                        <div class="reviewer-info">
+                            <strong>John Doe</strong>
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-value">5.0</span>
+                            <span class="rating-count">(10 reviews)</span>
+                        </div>
+                    </div>
+                    <div class="review-text">This product is amazing! I highly recommend it.</div>
+                </div>
+            <div class="reviews-container">
+                <div class="review">
+                    <div class="review-header">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvmLjYj0ADoq3XB2XLYWsv6_M-IzKhsbam4g&s" alt="Reviewer Avatar" class="reviewer-avatar">
+                        <div class="reviewer-info">
+                            <strong>John Doe</strong>
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-value">5.0</span>
+                            <span class="rating-count">(10 reviews)</span>
+                        </div>
+                    </div>
+                    <div class="review-text">This product is amazing! I highly recommend it.</div>
+                </div>
+            </div>
+            
+            <div class="write-review">
+                <h3>Write a Review</h3>
+                <div class="rating-input">
+                    <label for="review-rating">Rating:</label>
+                    <select id="review-rating">
+                        <option value="1">1 Star</option>
+                        <option value="2">2 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="5">5 Stars</option>
+                    </select>
+                </div>
+                <textarea id="review-text" rows="4" placeholder="Write your review here..."></textarea>
+                <button class="submit-review" onclick="submitReview()">Submit Review</button>
+            </div>
+            
+            <div class="reviews-container">
+                <h3>Reviews</h3>
+                <div id="reviewsList"></div>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="footer">
+        <a href="#top" class="back-to-top">Back to Top</a>
+        <div class="footer-links">
+            <a href="Conditions_of_use.html">Conditions of Use</a> |
+            <a href="Privacy-notice.html">Privacy Notice</a> |
+            <a href="ads-privacy.html">Your Ads Privacy Choices</a>
+        </div>
+        <div class="social-media">
+            <p>Follow Us:</p>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="copyright">© 1996-2024, ShopSphere.com, Inc. or its affiliates</p>
+    </footer>
+    <script defer src="nikeshoes.js"></script>
+</body>
+
+</html>

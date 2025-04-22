@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Sign Up Form Design</title>
+      <link rel="stylesheet" href="signup.css">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+      <style>
+         .error {
+            color: red;
+            font-size: 0.8em;
+            margin: 12px;
+         }
+         .valid {
+            border-color: green;
+         }
+         .invalid {
+            border-color: red;
+         }
+         .field {
+            padding: 3px;
+         }
+      </style>
+   </head>
+   <body>
+      <div><a href="index.html" class="logo" id="log">ShopSphere</a></div>
+
+      <div class="wrapper">
+         <div class="title">SIGN UP</div>
+         <form action="#" id="signup-form">
+            <div class="field">
+               <input type="text" id="name_input" required>
+               <label>Full Name</label>
+               <span class="error" id="name_error"></span>
+            </div>
+            <div class="field">
+               <input type="email" id="email" required>
+               <label>Email Address</label>
+               <span class="error" id="email_error"></span>
+            </div>
+            <div class="field">
+               <input type="password" id="password_input" required>
+               <label>Password</label>
+               <span class="error" id="password_error"></span>
+            </div>
+            <div class="field">
+               <input type="password" id="confirm_password_input" required>
+               <label>Confirm Password</label>
+               <span class="error" id="confirm_password_error"></span>
+            </div>
+            <div class="field">
+               <input type="tel" id="phone" required>
+               <label>Phone Number</label>
+               <span class="error" id="phone_error"></span>
+            </div>
+            <div class="content">
+               <div class="checkbox">
+                  <input type="checkbox" id="agree-terms" required>
+                  <label for="agree-terms">I agree to the <a href="T&C.html">terms and conditions</a></label>
+               </div>
+            </div>
+            <div class="field">
+               <input type="submit" value="Sign Up">
+            </div>
+            <div class="signup-link">
+               Already have an account? <a href="login.html">Login</a>
+            </div>
+         </form>
+      </div>
+
+      <script>
+         const form = document.getElementById('signup-form');
+         const nameInput = document.getElementById('name_input');
+         const emailInput = document.getElementById('email');
+         const passwordInput = document.getElementById('password_input');
+         const confirmPasswordInput = document.getElementById('confirm_password_input');
+         const phoneInput = document.getElementById('phone');
+
+         const nameError = document.getElementById('name_error');
+         const emailError = document.getElementById('email_error');
+         const passwordError = document.getElementById('password_error');
+         const confirmPasswordError = document.getElementById('confirm_password_error');
+         const phoneError = document.getElementById('phone_error');
+
+         nameInput.addEventListener('input', () => {
+            if (nameInput.value.trim() === '') {
+               nameError.textContent = 'Full Name is required';
+               nameInput.classList.add('invalid');
+               nameInput.classList.remove('valid');
+            } else {
+               nameError.textContent = '';
+               nameInput.classList.add('valid');
+               nameInput.classList.remove('invalid');
+            }
+         });
+
+         emailInput.addEventListener('input', () => {
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,6}$/;
+            if (!emailPattern.test(emailInput.value)) {
+               emailError.textContent = 'Enter a valid email address';
+               emailInput.classList.add('invalid');
+               emailInput.classList.remove('valid');
+            } else {
+               emailError.textContent = '';
+               emailInput.classList.add('valid');
+               emailInput.classList.remove('invalid');
+            }
+         });
+
+         passwordInput.addEventListener('input', () => {
+            if (passwordInput.value.length < 6) {
+               passwordError.textContent = 'Password must be at least 6 characters';
+               passwordInput.classList.add('invalid');
+               passwordInput.classList.remove('valid');
+            } else {
+               passwordError.textContent = '';
+               passwordInput.classList.add('valid');
+               passwordInput.classList.remove('invalid');
+            }
+         });
+
+         confirmPasswordInput.addEventListener('input', () => {
+            if (confirmPasswordInput.value !== passwordInput.value) {
+               confirmPasswordError.textContent = 'Passwords do not match';
+               confirmPasswordInput.classList.add('invalid');
+               confirmPasswordInput.classList.remove('valid');
+            } else {
+               confirmPasswordError.textContent = '';
+               confirmPasswordInput.classList.add('valid');
+               confirmPasswordInput.classList.remove('invalid');
+            }
+         });
+
+         phoneInput.addEventListener('input', () => {
+            const phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phoneInput.value)) {
+               phoneError.textContent = 'Enter a valid 10-digit phone number';
+               phoneInput.classList.add('invalid');
+               phoneInput.classList.remove('valid');
+            } else {
+               phoneError.textContent = '';
+               phoneInput.classList.add('valid');
+               phoneInput.classList.remove('invalid');
+            }
+         });
+
+         form.addEventListener('submit', (e) => {
+            if (
+               !nameInput.classList.contains('valid') ||
+               !emailInput.classList.contains('valid') ||
+               !passwordInput.classList.contains('valid') ||
+               !confirmPasswordInput.classList.contains('valid') ||
+               !phoneInput.classList.contains('valid')
+            ) {
+               e.preventDefault();
+               alert('Please fill out the details correctly');
+            }
+            else {
+               alert('Sign Up Successfully');
+               window.location.href = "login.html";
+            }
+         });
+      </script>
+   </body>
+</html>

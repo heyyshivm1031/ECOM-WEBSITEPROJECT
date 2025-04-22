@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopSphere</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a class="navbar-logo" href="index.html">ShopSphere</a>
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search...">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                &#9776; 
+            </button>
+            <div class="navbar-links">
+                <a href="index.html"><i class="fas fa-home"></i>Home</a>
+                <a href="aboutus.html"><i class="fas fa-info-circle"></i>About Us</a>
+                <a href="contactus.html"><i class="fas fa-envelope"></i>Contact Us</a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart </a>
+                <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="profile.html">
+                    <span class="profile-icon"><i class="fas fa-user"></i></span>Profile</a>
+
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <img src="bg.jpg" alt="ShopSphere Background" class="hero-background">
+        <div class="hero-content">
+            <h1>Welcome to Our Shop</h1>
+            <a href="#section-title" class="shop-btn">Go Shopping</a>
+        </div>
+    </section>
+
+    <h2 class="section-title" id="section-title">Product List</h2>
+    <section id="items" class="product-section">
+        <div class="product-list">
+            <a href="nikeshoes.html" class="product">
+                <div class="product-card">
+                    <img src="nikeshoes.jpg " alt="Nike Dunks High">
+                    <h3>Nike Dunks High</h3>
+                    <div class="price-cart">
+                        <p class="price">₹24,999.99</p></a>
+                        <button class="add-to-cart" data-id="1" data-name="Nike Dunks High" data-price="24999.99"
+                            data-image="nikeshoes.jpg"> Add to Cart</button>
+                    </div>
+                </div>
+            
+
+            
+            <a href="LED_TV.html" class="product"><div class="product-card">
+            <img src="pic12.jpg" alt="LED 4k HD">
+                <h3>LED 4k HD</h3>
+                <div class="price-cart">
+                    <p class="price">₹59,999.99</p></a>
+                    <button class="add-to-cart" data-id="2" data-name="LED 4k HD" data-price="59999.99"
+                        data-image="pic12.jpg">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pic3.jpg" alt="Refrigerator model">
+                <h3>Refrigerator</h3>
+                <div class="price-cart">
+                    <p class="price">₹49,999.99</p>
+                    <button class="add-to-cart" data-id="3" data-name="Refrigerator" data-price="49999.99"
+                        data-image="pic3.jpg">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pic8.jpg" alt="Ingredient vessel">
+                <h3 id="head3">Ingredient vessel</h3>
+                <div class="price-cart">
+                    <p class="price">₹399.99</p>
+                    <button class="add-to-cart" data-id="4" data-name="Ingredient vessel" data-price="399.99"
+                        data-image="pic8.jpg">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pic5.jpg" alt="Packbage &amp; watches">
+                <h3 id="head3">Packbags</h3>
+                <div class="price-cart">
+                    <p class="price">₹5,999.99</p>
+                    <button class="add-to-cart" data-id="5" data-name="Packbags" data-price="5999.99"
+                        data-image="pic5.jpg">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pic2.jpg" alt="Carpet 6X6 ">
+                <h3 id="head3">Carpet 6X6 </h3>
+                <div class="price-cart">
+                    <p class="price">₹1,199.99</p>
+                    <button class="add-to-cart" data-id="6" data-name="Carpet 6X6" data-price="1199.99"
+                        data-image="pic2.jpg">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="200-9.jpg" alt="portable table">
+                <h3 id="head3">Portable Table</h3>
+                <div class="price-cart">
+                    <p class="price">₹15,699.99</p>
+                    <button class="add-to-cart" data-id="7" data-name="Portable Table" data-price="15699.99"
+                        data-image="200-9.jpg">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="200-8.jpg" alt="Dining table 4X4">
+                <h3 id="head3">Dining table 4X4</h3>
+                <div class="price-cart">
+                    <p class="price">₹20,599.99</p>
+                    <button class="add-to-cart" data-id="8" data-name="Dining table 4X4" data-price="20599.99"
+                        data-image="200-8.jpg">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="200-7.jpg" alt="Titanium Knife">
+                <h3 id="head3">Titanium Knife</h3>
+                <div class="price-cart">
+                    <p class="price">₹1,999.99</p>
+                    <button class="add-to-cart" data-id="9" data-name="Titanium Knife" data-price="1999.99"
+                        data-image="200-7.jpg">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="200-6.jpg" alt="Acoustic Lamp">
+                <h3 id="head3">Acoustic Lamp</h3>
+                <div class="price-cart">
+                    <p class="price">₹1,099.99</p>
+                    <button class="add-to-cart" data-id="10" data-name="Acoustic Lamp" data-price="1099.99"
+                        data-image="200-6.jpg">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pic4.jpg" alt="Washing Machine">
+                <h3 id="head3">Washing Machine</h3>
+                <div class="price-cart">
+                    <p class="price">₹49,999.99</p>
+                    <button class="add-to-cart" data-id="11" data-name="Washing Machine" data-price="49999.99"
+                        data-image="pic4.jpg">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="200-5.jpg" alt="Lobby Couch">
+                <h3 id="head3">Lobby Couch</h3>
+                <div class="price-cart">
+                    <p class="price">₹39,999.99</p>
+                    <button class="add-to-cart" data-id="12" data-name="Lobby Couch" data-price="39999.99"
+                        data-image="200-5.jpg">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="hero-section-1"></div>
+    <div class="hero-msg-1">
+        <p>You are welcome on our site which we created for first time ever ,Thanks. <a href="index.html" id="a1"> click
+                here to go ShopSphere.com</a></p>
+
+    </div>
+    </div>
+
+    <div class="shop-section" id="shop-section">
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Tables</h2>
+                <div class="box-img" style="background-image: url('200-8.jpg');"></div>
+                <a href="Tables.html" class="product"><p>See more</p></a>
+
+            </div>
+
+        </div>
+        <div class="box2 box">
+            <div class="box-content">
+                <h2>Headphones</h2>
+                <div class="box-img" style="background-image: url('https://shopatsc.com/cdn/shop/products/CH520_1000x1000_Blue_G.jpg?v=1681219211');"></div>
+                <p>See more</p>
+
+            </div>
+
+        </div>
+
+        <div class="box3 box">
+            <div class="box-content">
+                <h2>Vehicles</h2>
+                <div class="box-img" style="background-image: url('pic11.jpg');"></div>
+                <p>See more</p>
+
+            </div>
+
+        </div>
+
+        <div class="box4 box">
+            <div class="box-content">
+                <h2>Spares & Parts</h2>
+                <div class="box-img" style="background-image: url('200-4.jpg');"></div>
+                <p>See more</p>
+
+            </div>
+
+        </div>
+
+        <div class="box5 box">
+            <div class="box-content">
+                <h2>Furnitures</h2>
+                <div class="box-img" style="background-image: url('200-5.jpg');"></div>
+                <p>See more</p>
+
+            </div>
+
+        </div>
+        <div class="box6 box">
+            <div class="box-content">
+                <h2>Table lamps</h2>
+                <div class="box-img" style="background-image: url('200-6.jpg');"></div>
+                <p>See more</p>
+
+            </div>
+
+        </div>
+
+        <div class="box7 box">
+            <div class="box-content">
+                <h2>Kitchen Itenaries</h2>
+                <div class="box-img" style="background-image: url('200-9.jpg');"></div>
+                <p>See more</p>
+
+            </div>
+
+        </div>
+
+        <div class="box8 box">
+
+            <div class="box-content">
+                <h2>Knifes</h2>
+                <div class="box-img" style="background-image: url('200-7.jpg');"></div>
+                <p>See more</p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer"  >
+        <a href="#top" class="back-to-top">Back to Top</a>
+        <div class="footer-links">
+            <a href="Conditions_of_use.html">Conditions of Use</a> |
+            <a href="Privacy-notice.html">Privacy Notice</a> |
+            <a href="ads-privacy.html">Your Ads Privacy Choices</a>
+        </div>
+        <div class="social-media">
+            <p>Follow Us:</p>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="copyright">©2024, ShopSphere.com, Inc. or its affiliates</p>
+    </footer>
+
+    <script src="index.js"></Script>
+</body>
+
+</html>

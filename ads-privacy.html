@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Ads Privacy Choices - ShopSphere</title>
+    <link rel="stylesheet" href="ads-privacy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a class="navbar-logo" href="index.html">ShopSphere</a>
+        <div class="navbar-links">
+            <a href="index.html"><i class="fas fa-home"></i>Home</a>
+            <a href="aboutus.html"><i class="fas fa-info-circle"></i>About Us</a>
+            <a href="contactus.html"><i class="fas fa-envelope"></i>Contact Us</a>
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i> Cart
+            </a>
+            <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="profile.html">
+                <span class="profile-icon">
+                    <i class="fas fa-user"></i>
+                </span>
+                Profile
+            </a>
+        </div></nav>
+
+    <main>
+        <section class="privacy-container">
+            <h1>Your Ads Privacy Choices</h1>
+            <p>At ShopSphere, we value your privacy. This page explains how we use personalized advertising and provides you with options to manage your ad preferences.</p>
+
+            <h2>1. Why We Use Personalized Ads</h2>
+            <p>
+                Personalized ads allow us to show you more relevant products and offers based on your browsing behavior, preferences, and interactions with our site.
+            </p>
+
+            <h2>2. What Data Do We Use?</h2>
+            <p>To provide personalized ads, we may collect and use the following types of information:</p>
+            <ul>
+                <li>Your browsing history on ShopSphere</li>
+                <li>Interactions with ads and promotions</li>
+                <li>Device and location data (if allowed)</li>
+                <li>Demographic and interest information (provided voluntarily or inferred)</li>
+            </ul>
+
+            <h2>3. Your Privacy Choices</h2>
+            <p>You have control over the ads you see. Here are your options:</p>
+            <ul>
+                <li><strong>Opt-Out of Personalized Ads:</strong> You can opt-out of receiving personalized ads by clicking the button below.</li>
+                <li><strong>Adjust Browser Settings:</strong> Modify your browser’s cookie settings to block tracking cookies.</li>
+                <li><strong>Use Ad Preferences Tools:</strong> Platforms like Google and Facebook provide tools to manage ad preferences.</li>
+            </ul>
+
+            <button id="optOutButton" class="opt-out-btn">Opt-Out of Personalized Ads</button>
+            <p id="optOutStatus" style="margin-top: 10px; color: green;"></p>
+
+            <h2>4. Third-Party Advertisers</h2>
+            <p>
+                We may partner with third-party advertisers to deliver ads. These advertisers may use their own cookies and tracking technologies. For more details, please review their privacy policies.
+            </p>
+
+            <h2>5. Contact Us</h2>
+            <p>If you have questions about our ad practices or privacy choices, please <a href="contactus.html">contact us</a>.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#top" class="back-to-top">Back to Top</a>
+        <div class="footer-links">
+            <a href="Conditions_of_use.html">Conditions of Use</a> |
+            <a href="Privacy-notice.html">Privacy Notice</a> |
+            <a href="ads-privacy.html">Your Ads Privacy Choices</a>
+        </div>
+        <div class="social-media">
+            <p>Follow Us:</p>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="copyright">©2024, ShopSphere.com, Inc. or its affiliates</p>
+    </footer>
+
+    <script defer>
+        document.getElementById("optOutButton").addEventListener("click", function () {
+            localStorage.setItem("adsOptOut", "true");
+            document.getElementById("optOutStatus").textContent = "You have successfully opted out of personalized ads.";
+        });
+
+        if (localStorage.getItem("adsOptOut") === "true") {
+            document.getElementById("optOutStatus").textContent = "You have opted out of personalized ads.";
+        }
+    </script>
+</body>
+
+</html>

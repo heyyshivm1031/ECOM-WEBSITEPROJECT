@@ -1,0 +1,576 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #0b0b0b;
+    color: #fff;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.ShopSphere
+{
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.sidebar-toggle:hover {
+    background-color: #e05656;
+}
+.profile-page {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgba(20, 20, 20, 1), rgba(0, 0, 0, 1));
+    background-size: cover;
+    background-position: center;
+    flex-direction: row;
+    transition: all 0.3s ease;
+}
+.sidebar-quote p{
+    text-align: center;
+    margin-top: 0px;
+    font-size: large;
+    color: #78ff97;
+}
+
+.sidebar {
+    background: rgba(31, 31, 31, 0.9);
+    width: 250px;
+    padding: 20px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 30px;
+    
+
+}
+
+.sidebar-header h2 {
+    font-size: 38px;
+    color: #ff6b6b;
+    letter-spacing: 2px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    margin: 15px 0;
+}
+
+.sidebar-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 28px;
+    display: block;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+    background-color: #333;
+    transform: translateX(5px);
+}
+
+.profile-content {
+    flex: 1;
+    padding: 40px;
+    background-color: rgba(24, 24, 24, 0.9);
+    border-left: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.profile-overview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+.profile-avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #ff6b6b;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile-avatar img:hover {
+    transform: scale(1.1);
+}
+
+.image-checkbox {
+    display: none;
+}
+
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.image-checkbox:checked + .lightbox-overlay {
+    display: flex;
+}
+
+.profile-info {
+    font-size: 18px;
+}
+
+.profile-info h1 {
+    font-size: 28px;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.profile-actions button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-actions .btn-primary {
+    background-color: #ff6b6b;
+}
+
+.profile-actions .btn-secondary {
+    background-color: #333;
+}
+
+.profile-actions button:hover {
+    transform: scale(1.05);
+}
+
+.profile-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.section-card {
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.section-card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.section-card p {
+    font-size: 16px;
+}
+
+.section-card button {
+    background-color: #ff6b6b;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.section-card:hover {
+    background-color: rgba(35, 35, 35, 1);
+    cursor: pointer; 
+    transform: scale(1.02);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.section-card h2, .section-card p {
+    padding: 5px 0;
+} 
+li{
+    margin-bottom: 15px;
+
+}
+.status {
+    font-weight: bold;
+    padding: 1px 6px;
+    border-radius: 5px;
+}
+
+.status.delivered {
+    background-color: #28a745; 
+    color: white;
+}
+
+.status.shipped {
+    background-color: #ffc107; 
+    color: black;
+}
+
+
+.status.pending {
+    background-color: #dc3545; 
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .profile-page {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        transform: translateX(-100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .profile-content {
+        padding: 20px;
+    }
+
+    .profile-avatar img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-info h1 {
+        font-size: 24px;
+    }
+
+    .profile-info p {
+        font-size: 14px;
+    }
+
+    .profile-actions button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .profile-sections {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .section-card {
+        padding: 15px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-header h2 {
+        font-size: 28px;
+    }
+    .sidebar-nav a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .profile-avatar img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-info h1 {
+        font-size: 22px;
+    }
+
+    .profile-info p {
+        font-size: 12px;
+    }
+
+    .profile-actions button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .profile-sections {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .section-card {
+        padding: 10px;
+    }
+
+    .lightbox-image {
+        max-width: 80%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .profile-page {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+    }
+
+    .profile-content {
+        padding: 40px;
+    }
+
+    .profile-avatar img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-info h1 {
+        font-size: 28px;
+    }
+
+    .profile-info p {
+        font-size: 16px;
+    }
+
+    .profile-actions button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .profile-sections {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .section-card {
+        padding: 20px;
+    }
+}
+@keyframes slideIn {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.modal-content input {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ff6b6b;
+}
+.sidebar.open {
+    transform: translateX(0);
+}
+.sidebar-toggle {
+    display: none; /* Default: hidden */
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar-toggle {
+        display: flex; /* Visible on smaller screens */
+    }
+}
+.modal-content textarea {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content input,
+.modal-content select {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.modal-content button:hover {
+    background-color: #e05656;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ff6b6b;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content input {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.modal-content button:hover {
+    background-color: #e05656;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ff6b6b;
+}
